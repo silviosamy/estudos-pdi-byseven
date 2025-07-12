@@ -1,9 +1,19 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using System;
+using System.Globalization;
 
 
-bool x = false;
-Console.WriteLine(x);
+namespace PrimeiroProjeto
+{
+        class Program {
+        static void Main(string[] args) {
 
-int n1 = int.MinValue;
-Console.WriteLine(n1);
+            string nome = "Maria";
+            int idade = 32;
+            double saldo = 10.35784;
 
+            Console.WriteLine("{0} tem {1} anos e o seu saldo é de R${2:F2}", nome, idade, saldo); // Formatação com placeholders
+            Console.WriteLine($"{nome} tem {idade} anos e seu saldo é de R${saldo:F2}"); // Interpolação de strings
+
+        }
+    }
+}
